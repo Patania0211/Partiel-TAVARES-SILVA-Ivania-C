@@ -1,6 +1,7 @@
 #include "player.h"
 
 int drawPlayer(Player player, SDL_Renderer* renderer){
+    //Function handling the displaying of the player on the screen
 	SDL_Rect playerRect = { player.x, player.y, player.w, player.h };
 
 	SDL_SetRenderDrawColor(renderer, 155, 1, 224, 1);
@@ -8,7 +9,9 @@ int drawPlayer(Player player, SDL_Renderer* renderer){
 
     return 0;
 }
+
 int movePlayer(Player* player) {
+    //Function handling the player movement
     const Uint8* state = SDL_GetKeyboardState(NULL);
     if (state[SDL_SCANCODE_W]) {
         (int)player->y -= (int)player->velocity;

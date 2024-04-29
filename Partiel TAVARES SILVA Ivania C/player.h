@@ -9,3 +9,6 @@ typedef struct Player {
 	int h;
 	int velocity;
 }Player;
+
+int drawPlayer(Player player, SDL_Renderer* renderer);
+int movePlayer(Player* player);

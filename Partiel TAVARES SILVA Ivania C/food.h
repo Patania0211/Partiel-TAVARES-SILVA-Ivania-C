@@ -1,5 +1,6 @@
 #pragma once
 #include <SDL.h>
+
 typedef struct Food {
 	int x;
 	int y;
@@ -7,3 +8,5 @@ typedef struct Food {
 	int h;
 } Food;
 
+
+int createFood(Food food, SDL_Renderer* renderer);
